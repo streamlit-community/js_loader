@@ -7,7 +7,7 @@ long_description = (this_directory / "README.md").read_text()
 
 setuptools.setup(
     name="js-loader",
-    version="0.2.1",
+    version="0.2.2",
     author="Hans Then",
     author_email="hans.then@gmail.com",
     description="Load javascript files as python modules",
