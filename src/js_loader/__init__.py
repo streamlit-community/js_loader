@@ -44,7 +44,7 @@ class JavascriptLoader(SourceLoader):
         module = pm.require(filename)
         symbols = pm.eval("(module) => { return Object.keys(module) }")(module)
         toString = pm.eval("(module, name) => module[name].toString()")
-        lines = ["from jscode import JsCode"]
+        lines = ["from js_loader import JsCode"]
         for symbol in symbols:
             body = toString(module, symbol)
             lines.append(f'{symbol} = JsCode("""\n{body}\n""")')
